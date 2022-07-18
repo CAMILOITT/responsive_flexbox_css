@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  /* # Front-end Style Guide */
+
+  /* ## Layout */
+  /* The designs were created to the following widths: */
+  /* - Mobile: 375px */
+  /* - Desktop: 1440px */
+
+  /* ## Colors */
+  /* ### Primary */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* ### Neutral */
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+
+  /* ## Typography */
+  /* ### Body Copy */
+  --Font-size: 15px;
+
+  /* ### Fonts */
+  /* - Family: [Poppins](https://fonts.google.com/specimen/Poppins) */
+  /* - Weights: 200, 400, 600 */
+  --poppins: 'Poppins', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--poppins);
+}
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: var(--Very-Light-Gray);
+}
+.container-letter {
+  text-align: center;
+}
+.container-letter h1 {
+  color: var(--Very-Dark-Blue);
+  margin: 20px 0;
+  font-size: clamp(20px, 5vw, 32px);
+}
+.container-letter h1 span {
+  font-weight: 200;
+  color: var(--Grayish-Blue);
+}
+.container-letter p {
+  color: var(--Grayish-Blue);
+  max-width: 530px;
+}
+.container-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 20px 0;
+}
+.item {
+  background: white;
+  width: 380px;
+  height: 250px;
+  border: 1px solid var(--Very-Light-Gray);
+  border-top: 4px solid;
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-top-left-radius: 10px 4px;
+  border-top-right-radius: 10px 4px;
+  box-shadow: 0 3px 20px -10px var(--Blue),
+    0 5px 30px -20px var(--Very-Dark-Blue),
+    0 4px 20px 10px var(--Very-Light-Gray);
+}
+.item h2 {
+  margin-bottom: 10px;
+  color: var(--Very-Dark-Blue);
+}
+.item p {
+  color: var(--Grayish-Blue);
+}
+.supervisor-box {
+  border-top-color: var(--Cyan);
+}
+.team-builder-karma {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: stretch;
+}
+.team-builder-box {
+  border-top-color: var(--Red);
+}
+.karma-box {
+  border-top-color: var(--Orange);
+}
+.calculator {
+  border-top-color: var(--Blue);
+}
+.images {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+}
