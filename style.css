@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
 :root {
-  /* # Front-end Style Guide */
-
-  /* ## Layout */
-  /* The designs were created to the following widths: */
-  /* - Mobile: 375px */
-  /* - Desktop: 1440px */
-
   /* ## Colors */
   /* ### Primary */
   --Red: hsl(0, 78%, 62%);
@@ -43,34 +36,36 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 30px 10px 50px;
   background: var(--Very-Light-Gray);
+  position: relative;
 }
-.container-letter {
+.header {
   text-align: center;
 }
-.container-letter h1 {
+.header__title {
   color: var(--Very-Dark-Blue);
   margin: 20px 0;
   font-size: clamp(20px, 5vw, 32px);
 }
-.container-letter h1 span {
+.title__span {
   font-weight: 200;
   color: var(--Grayish-Blue);
 }
-.container-letter p {
+.header__detail {
   color: var(--Grayish-Blue);
   max-width: 530px;
 }
-.container-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin: 20px 0;
+.main {
+  display: grid;
+  grid-template-areas:
+    'supervisor teamBuilder calculator'
+    'supervisor karma calculator';
+  place-items: center;
+  grid-auto-flow: dense;
+  gap: 20px;
 }
-.item {
+.main__skills {
   background: white;
   width: 380px;
   height: 250px;
@@ -89,33 +84,60 @@ body {
     0 5px 30px -20px var(--Very-Dark-Blue),
     0 4px 20px 10px var(--Very-Light-Gray);
 }
-.item h2 {
+.skills__title {
   margin-bottom: 10px;
   color: var(--Very-Dark-Blue);
 }
-.item p {
+.skills__details {
   color: var(--Grayish-Blue);
 }
-.supervisor-box {
+.main__skills-supervisor {
   border-top-color: var(--Cyan);
+  grid-area: supervisor;
 }
-.team-builder-karma {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: stretch;
-}
-.team-builder-box {
+.main__skills-teamBuilder {
   border-top-color: var(--Red);
+  grid-area: teamBuilder;
 }
-.karma-box {
+.main__skills-karma {
   border-top-color: var(--Orange);
+  grid-area: karma;
 }
-.calculator {
+.main__skills-calculator {
   border-top-color: var(--Blue);
+  grid-area: calculator;
 }
-.images {
+.skills__images {
   position: absolute;
   right: 30px;
   bottom: 20px;
+}
+@media screen and (max-width: 1220px) {
+  .main {
+    grid-template-areas:
+      'supervisor teamBuilder '
+      ' karma calculator';
+  }
+}
+@media screen and (max-width: 800px) {
+  .main {
+    grid-template-areas:
+      'supervisor' 'teamBuilder '
+      ' karma' 'calculator';
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+.attribution a {
+  color: var(--Red);
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: bold;
 }
